@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package higebu.example.v1;
+
+import "buf/validate/validate.proto";
+
+option go_package = "github.com/higebu/protovalidate-ip-prefix-example/gen/go/higebu/example/v1;examplev1";
+
+service ExampleService {
+  rpc AddIPv4Address(AddIPv4AddressRequest) returns (AddIPv4AddressResponse) {}
+  rpc AddIPv6Address(AddIPv6AddressRequest) returns (AddIPv6AddressResponse) {}
+  rpc AddIPv4Route(AddIPv4RouteRequest) returns (AddIPv4RouteResponse) {}
+  rpc AddIPv6Route(AddIPv6RouteRequest) returns (AddIPv6RouteResponse) {}
+}
+
+message AddIPv4AddressRequest {
+  string name = 1;
+  string address = 2 [(buf.validate.field).string.ipv4_with_prefixlen = true];
+}
+
+message AddIPv4AddressResponse {
+  string name = 1;
+  string address = 2;
+}
+
+message AddIPv6AddressRequest {
+  string name = 1;
+  string address = 2 [(buf.validate.field).string.ipv6_with_prefixlen = true];
+}
+
+message AddIPv6AddressResponse {
+  string name = 1;
+  string address = 2;
+}
+
+message AddIPv4RouteRequest {
+  string name = 1;
+  string prefix = 2 [(buf.validate.field).string.ipv4_prefix = true];
+  string nexthop = 3 [(buf.validate.field).string.ipv4 = true];
+}
+
+message AddIPv4RouteResponse {
+  string name = 1;
+  string prefix = 2;
+  string nexthop = 3;
+}
+
+message AddIPv6RouteRequest {
+  string name = 1;
+  string prefix = 2 [(buf.validate.field).string.ipv6_prefix = true];
+  string nexthop = 3 [(buf.validate.field).string.ipv6 = true];
+}
+
+message AddIPv6RouteResponse {
+  string name = 1;
+  string prefix = 2;
+  string nexthop = 3;
+}
