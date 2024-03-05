@@ -7,7 +7,7 @@ require (
 	github.com/bufbuild/protovalidate-go v0.6.0
 	github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.0.1
 	github.com/stretchr/testify v1.9.0
-	google.golang.org/grpc v1.62.0
+	google.golang.org/grpc v1.62.1
 	google.golang.org/protobuf v1.32.0
 )
 
