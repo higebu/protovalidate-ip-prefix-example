@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.34.2-20240717164558-a6c49f84cc0f.2
-	github.com/bufbuild/protovalidate-go v0.6.4
+	github.com/bufbuild/protovalidate-go v0.6.5
 	github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.1.0
 	github.com/stretchr/testify v1.9.0
 	google.golang.org/grpc v1.66.0
