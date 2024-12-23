@@ -1,6 +1,6 @@
 version: v1
 plugins:
-  - plugin: buf.build/protocolbuffers/go:v1.36.0 # renovate: depName=protocolbuffers/protobuf-go
+  - plugin: buf.build/protocolbuffers/go:v1.36.1 # renovate: depName=protocolbuffers/protobuf-go
     out: gen/go
     opt: paths=source_relative
   - plugin: buf.build/grpc/go:v1.69.2 # renovate: depName=grpc/grpc-go
