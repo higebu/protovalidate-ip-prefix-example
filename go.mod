@@ -5,7 +5,7 @@ go 1.22.7
 toolchain go1.24.2
 
 require (
-	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.4-20241127180247-a33202765966.1
+	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.6-20250425153114-8976f5be98c1.1
 	github.com/bufbuild/protovalidate-go v0.8.2
 	github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.2.0
 	github.com/stretchr/testify v1.10.0
