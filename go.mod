@@ -2,7 +2,7 @@ module github.com/higebu/protovalidate-ip-prefix-example
 
 go 1.23
 
-toolchain go1.24.2
+toolchain go1.27.1
 
 require (
 	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.4-20241127180247-a33202765966.1
